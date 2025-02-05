@@ -1,0 +1,29 @@
+.input {
+  display: flex;
+  width: 100%;
+  padding: 24px 30px 23px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: $black;
+
+  background-color: $white;
+  border: 1px solid $white;
+  border-radius: 10px;
+
+  &.error {
+    border-color: $red;
+  }
+
+  @include r($mobile) {
+    padding: 16px;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &::placeholder {
+    color: #D3E0F4;
+  }
+}

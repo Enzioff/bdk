@@ -1,0 +1,96 @@
+.footer {
+  padding-bottom: 20px;
+
+  @include r($mobile) {
+    padding-bottom: 10px;
+  }
+
+  &__inner {
+    display: flex;
+    padding: 30px 0 38px;
+    background-color: $black;
+    border-radius: 30px;
+    overflow: hidden;
+
+    @include r($mobile) {
+      border-radius: 20px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include r($mobile) {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    @include r($mobile) {
+      order: 1;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+    color: $white;
+
+    @include r($mobile) {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19px;
+    }
+
+    &--big {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px;
+    }
+  }
+
+  a.footer__link {
+    text-decoration: underline;
+  }
+
+  a.footer__link--big {
+    text-decoration: none;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include r($mobile) {
+      align-items: center;
+    }
+
+    .footer__link {
+      text-align: right;
+
+      @include r($mobile) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__logo {
+    @include r($mobile) {
+      display: flex;
+      order: 0;
+      width: 238px;
+      height: 80px;
+    }
+  }
+}

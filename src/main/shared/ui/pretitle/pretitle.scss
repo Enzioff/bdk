@@ -1,0 +1,15 @@
+.pretitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  color: $blue;
+
+  &--light {
+    color: #B0C9ED;
+  }
+
+  @include r($mobile) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

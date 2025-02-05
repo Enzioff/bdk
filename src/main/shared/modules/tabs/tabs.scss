@@ -1,0 +1,31 @@
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @include r($mobile) {
+    display: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: $blue;
+    background-color: $white;
+    border-radius: 100px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color .2s linear, background-color .2s linear, font-weight .2s linear;
+
+    &.active {
+      font-weight: 700;
+      color: $white;
+      background-color: $black;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100vw;
+  max-width: 400px;
+  padding: 35px;
+
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+  color: $white;
+
+  border-radius: 100px;
+  background-color: $black;
+
+  transition: max-width .2s linear;
+  cursor: pointer;
+
+  &:hover {
+    max-width: 450px;
+  }
+
+  @include r($mobile) {
+    padding: 20px;
+    max-width: 280px;
+    font-size: 16px;
+    line-height: 19px;
+
+    &:hover {
+      max-width: 330px;
+    }
+  }
+
+  &--small {
+    padding: 16px 20px 15px;
+    max-width: 180px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    background-color: $purple;
+
+    &:hover {
+      max-width: 220px;
+    }
+
+    @include r($mobile) {
+      padding: 12px 14px;
+      width: auto;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 12px;
+    }
+  }
+
+  &--download {
+    justify-content: flex-start;
+    gap: 10px;
+    max-width: none;
+    width: 284px;
+    padding: 7px 8px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    background: rgba($white, .1);
+    border: 1px solid rgba($white, .15);
+
+    @include r($mobile) {
+      width: auto;
+      padding: 3px 15px 3px 3px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 14px;
+    }
+
+    &:hover {
+      max-width: none;
+    }
+
+    &-slim {
+      width: 214px;
+      padding: 4px 5px 4px 5px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19px;
+
+
+      .button__element {
+        width: 40px;
+        height: 40px;
+      }
+
+      .button__icon {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  &__element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgba($white, .1);
+    backdrop-filter: blur(10px);
+
+    @include r($mobile) {
+      width: 32px;
+      height: 32px;
+    }
+
+    .button__icon {
+      width: 25px;
+      height: 25px;
+
+      @include r($mobile) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    width: 72px;
+    height: 12px;
+    fill: $white;
+
+    @include r($mobile) {
+      width: 36px;
+      height: 6px;
+    }
+  }
+
+}

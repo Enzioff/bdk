@@ -1,0 +1,32 @@
+.photos {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: $white;
+  border-radius: 40px;
+  overflow: hidden;
+
+  @include r($mobile) {
+    padding: 50px 0;
+    border-radius: 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+
+    @include r($mobile) {
+      gap: 50px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include r($mobile) {
+      gap: 30px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.fancybox__content {
+  padding: 0;
+  border-radius: 40px;
+  overflow: hidden;
+  background: transparent;
+
+  @include r($mobile) {
+    border-radius: 20px;
+  }
+}
+
+.fancybox__container {
+  --fancybox-bg: #242424CC;
+}
+
+.fancybox__backdrop {
+  backdrop-filter: blur(10px);
+}
+
+.fancybox-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  opacity: .7;
+  transition: .2s linear;
+  cursor: pointer;
+
+  @include r($mobile) {
+    top: 15px;
+    right: 15px;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+
+  svg {
+    @include r($mobile) {
+      display: flex;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

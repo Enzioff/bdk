@@ -1,0 +1,78 @@
+.feedback {
+  display: flex;
+  gap: 30px;
+
+  @include r($mobile) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &--modal {
+    min-height: 573px;
+
+    .feedback__form {
+      width: 100%;
+      max-width: 670px;
+      padding: 70px;
+
+      @include r($mobile) {
+        padding: 30px 20px 20px 20px;
+        min-height: 342px;
+      }
+    }
+
+    .button {
+      max-width: 480px;
+
+      @include r($mobile) {
+        padding: 20px 18px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px;
+    width: 100%;
+    max-width: 870px;
+    background-color: $white;
+    border-radius: 40px;
+    overflow: hidden;
+
+    @include r($mobile) {
+      gap: 20px;
+      width: 100%;
+      border-radius: 20px;
+      padding: 30px 20px 20px;
+      max-width: 100%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      width: 530px;
+      height: 480px;
+      background-image: url("../assets/images/3d-object-6.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 630px;
+
+    @include r($mobile) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

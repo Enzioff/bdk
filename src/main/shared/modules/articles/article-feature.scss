@@ -1,0 +1,48 @@
+.article-feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 431px;
+  max-width: 530px;
+  padding: 40px;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: $bg;
+  background-image: url("../assets/images/bg-card.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include r($mobile) {
+    padding: 20px;
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+  }
+
+  &__title {
+    font-size: 100px;
+    font-weight: 600;
+    line-height: 121px;
+    letter-spacing: -0.02em;
+    color: $blue;
+
+    @include r($mobile) {
+      font-size: 44px;
+      line-height: 36px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $black;
+
+    @include r($mobile) {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+}

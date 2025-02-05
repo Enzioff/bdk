@@ -1,0 +1,10 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+
+  &--center {
+    text-align: center;
+  }
+}

@@ -1,0 +1,92 @@
+<div class="hidden">
+    <div class="modal" id="modal-form">
+        <div class="feedback feedback--modal">
+            <form action="#" class="feedback__form form" novalidate>
+                <h2 class="form__title title">Стать партнером</h2>
+                <div class="form__wrapper">
+                    <div class="form__list">
+                        <label class="form__item">
+                            <input class="input" type="text" placeholder="Ваше имя*" required>
+                        </label>
+                        <label class="form__item">
+                            <input class="input" type="text" placeholder="Ваша Фамилия">
+                        </label>
+                        <label class="form__item">
+                            <input class="input" type="tel" placeholder="Номер телефона*" required>
+                        </label>
+                        <label class="form__item">
+                            <input class="input" type="text" placeholder="Название организации">
+                        </label>
+                        <label class="form__item">
+                            <input class="input" type="text" placeholder="Должность">
+                        </label>
+                    </div>
+                    <div class="form__control">
+                        <label class="form__item">
+                            <input class="checkbox" type="checkbox" data-accept-form>
+                            <span>Нажимая кнопку, вы соглашаетесь с условиями <a
+                                href="https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2FaAZRPVevQASvyJzzehtUH16AiCNtXfSWdINuH0Mt4G%2FvdXL93soMEJVDRIjhENN%2Fq%2FJ6bpmRyOJonT3VoXnDag%3D%3D&name=Политика%20в%20отношении%20обработки%20персональных%20данных_БДК.docx"
+                                target="_blank">Политики конфиденциальности</a></span>
+                        </label>
+                        <label class="form__item">
+                            <input class="checkbox" type="checkbox" data-accept-form>
+                            <span>Нажимая кнопку, вы соглашаетесь на обработку персональных данных</span>
+                        </label>
+                    </div>
+                    <button class="button" type="submit">
+                        Зарегистрироваться
+                        <svg class="button__icon">
+                            <use xlink:href="./assets/sprite.svg#icon-arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modal-accept">
+        <div class="feedback feedback--modal">
+            <div class="feedback__form form">
+                <div class="form__wrapper">
+                    <div class="head head--center">
+                        <h2 class="form__title title mb-20">
+                            Успешно
+                        </h2>
+                        <p class="form__text text">
+                            Спасибо! Менеджер клуба свяжется с вами в ближайшее время.
+                        </p>
+                    </div>
+                    <button class="button" data-fancybox-close>
+                        Вернуться на страницу
+                        <svg class="button__icon">
+                            <use xlink:href="./assets/sprite.svg#icon-arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal-error">
+        <div class="feedback feedback--modal">
+            <div class="feedback__form form">
+                <div class="form__wrapper">
+                    <div class="head head--center">
+                        <h2 class="form__title title mb-20">
+                            Неудачно
+                        </h2>
+                        <p class="form__text text">
+                            К сожалению, возникла ошибка. Проверьте введённые данные и попробуйте снова. Если проблема
+                            сохранится, обратитесь в администрацию клуба по e-mail <a href="mailto:club@bdk.ru">club@bdk.ru</a> или по телефону
+                            <a href="+79062376400">8-906-237-64-00</a>.
+                        </p>
+                    </div>
+                    <button class="button" data-fancybox-close>
+                        Вернуться на страницу
+                        <svg class="button__icon">
+                            <use xlink:href="./assets/sprite.svg#icon-arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

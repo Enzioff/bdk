@@ -1,0 +1,273 @@
+.slider {
+  &--auto {
+    .swiper-slide {
+      max-width: max-content;
+    }
+
+    .swiper-slide-active {
+      .picture {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  &--visible {
+    .swiper {
+      overflow: visible;
+    }
+  }
+
+  &--infinite {
+    .swiper-wrapper {
+      transition-timing-function: linear;
+      will-change: transform;
+    }
+  }
+
+  &--photos {
+    .swiper-slide {
+      display: flex;
+      height: auto;
+
+      &:nth-child(even) {
+        .article-photo {
+          height: 543px;
+
+          @include r($mobile) {
+            width: 257px;
+            height: 250px;
+          }
+        }
+      }
+    }
+
+    .swiper-slide-active {
+      .article-photo {
+        @include r($mobile) {
+          height: 270px !important;
+          filter: grayscale(0);
+        }
+      }
+
+      .article-photo__button {
+        @include r($mobile) {
+          height: auto;
+          padding: 5px;
+        }
+
+        span {
+          @include r($mobile) {
+            width: auto;
+            opacity: 1;
+            transition: .2s linear;
+          }
+        }
+      }
+
+      .article-photo__icon {
+        @include r($mobile) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &--position {
+    position: static;
+
+    @include r($mobile) {
+      position: relative;
+    }
+
+    .swiper {
+      position: static;
+    }
+
+    .swiper-control {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      @include r($mobile) {
+        position: relative;
+      }
+    }
+  }
+
+  &--photos-full {
+    .swiper-slide {
+      display: flex;
+      width: auto;
+      height: auto;
+
+      &:nth-child(even) {
+        .article-photo {
+          height: 573px;
+
+          @include r($mobile) {
+            height: 250px;
+          }
+        }
+      }
+    }
+
+    .swiper-slide-active {
+      .article-photo {
+        filter: grayscale(0);
+        height: 573px !important;
+
+        @include r($mobile) {
+          height: 270px !important;
+        }
+
+        .article-photo__button {
+          padding: 20px 40px;
+          height: auto;
+
+          @include r($mobile) {
+            padding: 12px 10px;
+          }
+
+          span {
+            width: auto;
+            opacity: 1;
+            transition: .2s linear;
+            @include r($mobile) {
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              line-clamp: 2;
+              -webkit-box-orient: vertical;
+              text-align: center;
+            }
+          }
+        }
+
+        .article-photo__icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &--overflow {
+    .swiper-slide {
+      width: auto;
+    }
+
+    .swiper-slide-visible {
+    }
+  }
+
+  &--people {
+    margin-top: auto;
+    .swiper {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+
+      @include r($mobile) {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .swiper-navigation {
+      z-index: 3;
+    }
+
+    .swiper-wrapper {
+      max-width: 600px;
+
+      @include r($mobile) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.swiper-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.swiper-navigation {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  &--light {
+    .swiper-btn--disabled {
+      background-color: $white;
+    }
+  }
+}
+
+.swiper-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $blue;
+  transition: .2s linear;
+  cursor: pointer;
+
+  @include r($mobile) {
+    display: none;
+  }
+
+  &-prev {
+    transform: rotate(180deg);
+  }
+
+  &--disabled {
+    background-color: #EDF1F3;
+
+    .swiper-icon {
+      fill: $blue;
+    }
+  }
+
+  &:hover {
+    background-color: $blue;
+
+    .swiper-icon {
+      fill: $white;
+    }
+  }
+}
+
+.swiper-icon {
+  display: flex;
+  width: 19px;
+  height: 19px;
+  fill: $white;
+  transition: .2s linear;
+}
+
+.swiper-pagination {
+  width: 100%;
+  max-width: 500px;
+  height: 5px;
+  background-color: $bg;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &--light {
+    background-color: $white;
+  }
+
+  &-progressbar-fill {
+    display: block;
+    height: 5px;
+    background-color: $blue;
+    border-radius: 10px;
+    transform-origin: left;
+  }
+}

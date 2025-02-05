@@ -1,0 +1,30 @@
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  background-color: $black;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+
+  @include r($mobile) {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__icon {
+    display: flex;
+    width: 30px;
+    height: 30px;
+
+    @include r($mobile) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+}

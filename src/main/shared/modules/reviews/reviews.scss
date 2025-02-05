@@ -1,0 +1,246 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  overflow: hidden;
+
+  @include r($mobile) {
+    gap: 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 360px;
+    height: 600px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    @include r($mobile) {
+      height: 470px;
+      border-radius: 20px;
+      max-width: 280px;
+    }
+
+    &--text {
+      @include r($mobile) {
+        max-width: 327px;
+        height: 470px;
+      }
+      .reviews__author {
+        flex-direction: row;
+        gap: 14px;
+        margin-top: auto;
+      }
+
+      .reviews__info {
+        gap: 12px;
+        padding: 30px 30px 39px;
+        clip-path: none;
+        max-height: 100%;
+
+        @include r($mobile) {
+          padding: 20px;
+        }
+      }
+
+      .reviews__title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+
+        @include r($mobile) {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 19px;
+        }
+      }
+
+      .reviews__text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        -webkit-line-clamp: none;
+        line-clamp: none;
+      }
+
+      .reviews__subtitle {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        color: $blue;
+
+        @include r($mobile) {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16px;
+        }
+      }
+    }
+
+    &--sound {
+      .reviews__picture {
+        height: 241px;
+        border-radius: 30px;
+        overflow: hidden;
+
+        @include r($mobile) {
+          height: 170px;
+          border-radius: 20px;
+        }
+      }
+      .play-btn {
+        @include r($mobile) {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+
+    @include r($mobile) {
+      width: 40px;
+      height: 40px;
+    }
+
+    img {
+      @include coverFull();
+      object-fit: contain;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include r($mobile) {
+      gap: 4px;
+    }
+  }
+
+  &__head {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: $black;
+
+    @include r($mobile) {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19px;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__preview {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .play-btn {
+      top: initial;
+      left: initial;
+      right: 0;
+      bottom: 0;
+      transform: none;
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    @include r($mobile) {
+      gap: 8px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 30px 25px;
+    height: 100%;
+    max-height: 349px;
+    background-color: $white;
+    border-radius: 30px;
+    clip-path: path('M0 30C0 13.4315 13.4315 0 30 0H330C346.569 0 360 13.4315 360 30V221C360 237.569 346.569 251 330 251H312C284.386 251 262 273.386 262 301V319C262 335.569 248.569 349 232 349H30C13.4315 349 0 335.569 0 319V30Z');
+
+    @include r($mobile) {
+      gap: 10px;
+      padding: 20px;
+      border-radius: 20px;
+      clip-path: path('M0 20C0 8.9543 8.95431 0 20 0H260C271.046 0 280 8.9543 280 20V163C280 174.046 271.046 183 260 183H243C226.431 183 213 196.431 213 213V230C213 241.046 204.046 250 193 250H20C8.9543 250 0 241.046 0 230V20Z');
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: $gray;
+
+    @include r($mobile) {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: $black;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+
+    @include r($mobile) {
+      font-size: 14px;
+      line-height: 16px;
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
+    }
+  }
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+}

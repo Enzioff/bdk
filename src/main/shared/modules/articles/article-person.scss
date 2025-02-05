@@ -1,0 +1,63 @@
+.article-person {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 600px;
+
+  @include r($mobile) {
+    gap: 16px;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 160px;
+    height: 160px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: $white;
+
+    @include r($mobile) {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+    }
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38.73px;
+
+    @include r($mobile) {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $blue;
+
+    @include r($mobile) {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style>
+    .sprite-symbol-usage {display: none;}
+    .sprite-symbol-usage:target {display: inline;}
+  </style><symbol viewBox="0 0 439 491" id="benefit-bg">
+<path d="M0 491C210.252 430.7 372.561 263.118 426.11 51.0464L439 0V451C439 473.091 421.091 491 399 491H0Z" />
+</symbol><symbol viewBox="0 0 21 13" id="icon-arrow">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7304 0.669678L20.6607 6.60001L14.7304 12.5303L13.6697 11.4697L17.7894 7.35001H0.400024V5.85001H17.7894L13.6697 1.73034L14.7304 0.669678Z" />
+</symbol><symbol viewBox="0 0 11 7" fill="none" id="icon-arrow-down">
+<path d="M1.5 1L5.5 5L9.5 1" stroke="white" stroke-width="1.5" />
+</symbol><symbol viewBox="0 0 75 14" fill="none" id="icon-arrow-right">
+<path d="M1.5 7H73.5M73.5 7L63.5 1M73.5 7L63.5 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</symbol><symbol viewBox="0 0 22 21" fill="none" id="icon-arrow-top-right">
+<path d="M0.580095 18.8374C0.165487 19.2023 0.125154 19.8342 0.490009 20.2488C0.854864 20.6634 1.48674 20.7037 1.90135 20.3388L0.580095 18.8374ZM21.7572 2.47551C21.7924 1.92435 21.3741 1.44902 20.823 1.41384L11.8413 0.840539C11.2901 0.805358 10.8148 1.22364 10.7796 1.77481C10.7444 2.32597 11.1627 2.8013 11.7139 2.83648L19.6976 3.34608L19.188 11.3298C19.1528 11.881 19.5711 12.3563 20.1223 12.3915C20.6734 12.4267 21.1488 12.0084 21.1839 11.4572L21.7572 2.47551ZM1.90135 20.3388L21.4199 3.16252L20.0986 1.6611L0.580095 18.8374L1.90135 20.3388Z" fill="white" />
+</symbol><symbol viewBox="0 0 20 20" fill="none" id="icon-cross">
+<path d="M2 2L10 10M18 18L10 10M10 10L18 2L2 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+</symbol><symbol viewBox="0 0 30 30" fill="none" id="icon-download">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M29 15.319L29 22.9995C29 26.3132 26.3137 28.9995 23 28.9995L7 28.9995C3.68629 28.9995 0.999999 26.3132 0.999999 22.9995L0.999999 15.319C1 12.0053 3.68629 9.31902 7 9.31902L9.4 9.31902L14.2499 9.31902L14.2499 19.5148L11.3506 16.3796C11.0694 16.0755 10.5948 16.0569 10.2907 16.3382C9.98663 16.6194 9.96808 17.0939 10.2493 17.398L13.4594 20.8692C14.303 21.7814 15.6969 21.7814 16.5405 20.8692L19.7506 17.398C20.0318 17.0939 20.0133 16.6194 19.7092 16.3382C19.4051 16.0569 18.9305 16.0755 18.6493 16.3796L15.7499 19.5148L15.7499 9.31902L20.6 9.31902L23 9.31902C26.3137 9.31902 29 12.0053 29 15.319ZM15.7499 9.31902L15.7499 1.75C15.7499 1.33579 15.4142 0.999999 14.9999 0.999999C14.5857 0.999999 14.2499 1.33579 14.2499 1.75L14.2499 9.31902L15.7499 9.31902Z" fill="white" />
+</symbol><symbol viewBox="0 0 30 30" fill="none" id="icon-pause">
+<rect x="7" y="3" width="5" height="24" rx="2" fill="white" />
+<rect x="17" y="3" width="5" height="24" rx="2" fill="white" />
+</symbol><symbol viewBox="0 0 22 26" fill="none" id="icon-play">
+<path d="M21.5 12.1338C22.1667 12.5187 22.1667 13.481 21.5 13.8659L2.00001 25.1242C1.33334 25.5091 0.50001 25.028 0.50001 24.2582L0.500011 1.74151C0.500011 0.971714 1.33335 0.49059 2.00001 0.875491L21.5 12.1338Z" fill="white" />
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="icon-tel">
+<path d="M19.0621 20.9693C17.1077 22.9236 12.1028 21.0873 7.88327 16.8677C3.66372 12.6482 1.82739 7.64325 3.7817 5.68893L5.06847 4.40216C5.9568 3.51383 7.42054 3.53731 8.33784 4.45461L10.3309 6.4477C11.2482 7.36499 11.2717 8.82874 10.3834 9.71706L10.107 9.99345C9.62737 10.4731 9.58045 11.2468 10.0261 11.7868C10.456 12.3078 10.9194 12.8266 11.4219 13.3291C11.9244 13.8316 12.4432 14.295 12.9641 14.7249C13.5042 15.1705 14.2779 15.1236 14.7575 14.644L15.0339 14.3676C15.9222 13.4793 17.386 13.5028 18.3033 14.4201L20.2964 16.4131C21.2137 17.3304 21.2371 18.7942 20.3488 19.6825L19.0621 20.9693Z" fill="white" />
+<path d="M17.6265 9.75071C17.3825 9.15553 17.0189 8.5979 16.5356 8.11463C16.0796 7.65865 15.5575 7.30918 15 7.06622" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" />
+<path d="M15 3.66341C16.3346 4.14691 17.5869 4.92365 18.6569 5.99364C19.7537 7.09049 20.5424 8.37883 21.0229 9.75113" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" />
+</symbol></defs><use id="benefit-bg-usage" xlink:href="#benefit-bg" class="sprite-symbol-usage" /><use id="icon-arrow-usage" xlink:href="#icon-arrow" class="sprite-symbol-usage" /><use id="icon-arrow-down-usage" xlink:href="#icon-arrow-down" class="sprite-symbol-usage" /><use id="icon-arrow-right-usage" xlink:href="#icon-arrow-right" class="sprite-symbol-usage" /><use id="icon-arrow-top-right-usage" xlink:href="#icon-arrow-top-right" class="sprite-symbol-usage" /><use id="icon-cross-usage" xlink:href="#icon-cross" class="sprite-symbol-usage" /><use id="icon-download-usage" xlink:href="#icon-download" class="sprite-symbol-usage" /><use id="icon-pause-usage" xlink:href="#icon-pause" class="sprite-symbol-usage" /><use id="icon-play-usage" xlink:href="#icon-play" class="sprite-symbol-usage" /><use id="icon-tel-usage" xlink:href="#icon-tel" class="sprite-symbol-usage" /></svg>

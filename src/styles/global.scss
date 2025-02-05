@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+  min-height: 100vh;
+
+  font-family: $font-main;
+  font-size: 24px;
+  line-height: 1.2;
+  color: $black;
+
+  background-color: $bg;
+
+  overflow-x: hidden;
+
+  @include r($mobile) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.main {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.mob-hidden {
+  @include r($mobile) {
+    display: none;
+  }
+}
+
+.desktop-hidden {
+  @include rmin($mobile + 1) {
+    display: none;
+  }
+}
+
+.fixed {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+[data-content] {
+  height: 0;
+  overflow: hidden;
+
+  &.active {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+*[disabled] {
+  pointer-events: none;
+  opacity: .7;
+}
+
+.text-visible {
+  -webkit-line-clamp: none;
+  line-clamp: none;
+}
+
+.logo {
+  display: flex;
+  flex-shrink: 0;
+
+  @include r($mobile) {
+    width: 120px;
+  }
+}

@@ -1,0 +1,88 @@
+.editor {
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 51px;
+    color: $black;
+
+    @include r($mobile) {
+      font-size: 26px;
+      line-height: 33px;
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+
+    @include r($mobile) {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+  }
+
+  li,
+  p,
+  a {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 40px;
+    color: $gray;
+
+    @include r($mobile) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 35px;
+  }
+
+  span,
+  b {
+    font-weight: 700;
+    color: $black;
+  }
+
+  i {
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &--small {
+    li,
+    p,
+    a {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      color: $gray;
+
+      @include r($mobile) {
+        font-size: 12px;
+        line-height: 19px;
+      }
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    span,
+    b {
+      font-weight: 700;
+      color: #555555;
+    }
+  }
+}

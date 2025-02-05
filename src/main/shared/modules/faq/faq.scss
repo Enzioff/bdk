@@ -1,0 +1,171 @@
+.faq {
+  display: flex;
+  gap: 70px;
+
+  @include r($mobile) {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__info {
+    max-width: 770px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+
+    @include r($mobile) {
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-width: 570px;
+    background-color: $white;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @include r($mobile) {
+      width: 100%;
+      min-width: auto;
+      max-width: 100%;
+    }
+
+    &.active {
+      .faq__header {
+        background-color: #6F94CA;
+      }
+      .faq__title {
+        color: $white;
+      }
+      .faq__icon {
+        background-color: #FBFCFD;
+
+        &::before,
+        &::after {
+          background-color: #6F94CA;
+        }
+
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+      .faq__content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: auto;
+
+        @include r($mobile) {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 35px 35px 35px 30px;
+    background-color: #FBFCFD;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: background-color .2s linear;
+
+    @include r($mobile) {
+      padding: 20px;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #6F94CA;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .2s linear;
+
+    @include r($mobile) {
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 19px;
+      left: 15px;
+      width: 10px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: $white;
+      transition: .2s linear;
+
+      @include r($mobile) {
+        top: 14px;
+        left: 11px;
+        width: 8px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 19px;
+      width: 2px;
+      height: 10px;
+      border-radius: 2px;
+      background-color: $white;
+      transition: .2s linear;
+
+      @include r($mobile) {
+        top: 11px;
+        left: 14px;
+        height: 8px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    transition: color .2s linear;
+
+    @include r($mobile) {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $gray-dark;
+  }
+
+  &__content {
+    padding: 0 40px 0 30px;
+    height: 0;
+    overflow: hidden;
+    transition: padding .2s linear, height .2s linear;
+
+    @include r($mobile) {
+      padding: 0 20px;
+    }
+  }
+}

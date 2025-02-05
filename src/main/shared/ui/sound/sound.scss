@@ -1,0 +1,22 @@
+.sound {
+  position: relative;
+  display: flex;
+  margin-top: auto;
+
+  &__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $purple;
+    width: 0;
+    mix-blend-mode: color-burn;
+  }
+
+  svg {
+    @include r($mobile) {
+      width: 168px;
+      height: 42px;
+    }
+  }
+}
