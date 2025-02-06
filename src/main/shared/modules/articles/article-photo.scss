@@ -53,7 +53,7 @@
     max-width: 1300px;
 
     @include r($mobile) {
-      min-width: auto;
+      min-width: 311px;
       max-width: 311px;
     }
   }
