@@ -51,8 +51,9 @@
 
       .article-photo__button {
         @include r($mobile) {
+          width: 100%;
           height: auto;
-          padding: 5px;
+          padding: 12px 10px;
         }
 
         span {
@@ -126,6 +127,7 @@
           height: auto;
 
           @include r($mobile) {
+            width: 100%;
             padding: 12px 10px;
           }
 
