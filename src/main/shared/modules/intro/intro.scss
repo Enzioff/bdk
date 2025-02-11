@@ -122,6 +122,10 @@
       @include coverFull();
       transform-origin: bottom;
       object-position: top;
+
+      @include r($mobile) {
+        object-position: left;
+      }
     }
   }
 
