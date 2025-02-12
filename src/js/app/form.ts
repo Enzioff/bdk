@@ -1,5 +1,5 @@
 import axios from "axios";
-import {Fancybox} from "@fancyapps/ui";
+import { Fancybox } from "@fancyapps/ui";
 
 enum ModalStatus {
     ACCEPTED = "ACCEPTED",
@@ -53,9 +53,12 @@ class Form {
     
     getData = () => {
         const data = new FormData();
+        data.append('action', 'submit_lead');
+        data.append('nonce', lead_form_ajax.nonce);
         const errors: (HTMLInputElement | HTMLTextAreaElement)[] = [];
         
         this.inputs.forEach((input) => {
+            if (input.name === '_wp_http_referer') return;
             data.append(input.name, input.value);
             input.classList.remove('error')
             const isRequired = input.hasAttribute('required');
