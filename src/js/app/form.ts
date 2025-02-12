@@ -41,11 +41,7 @@ class Form {
         this.form.addEventListener('submit', evt => {
             evt.preventDefault();
             
-            grecaptcha.ready(()=> {
-                grecaptcha.execute('6LcBKdUqAAAAANFHfh5Zkg-ExdT7OHwzlKZqq0P_', {action: 'submit'}).then((token)=> {
-                    this.sendData();
-                });
-            });
+            this.sendData();
         })
     }
     

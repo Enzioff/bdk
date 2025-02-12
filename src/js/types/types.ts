@@ -8,3 +8,12 @@ export enum Direction {
     LEFT = 'left',
     RIGHT = 'right',
 }
+
+declare global {
+    var lead_form_ajax: {
+        nonce: string;
+        url: string;
+    };
+}
+
+export { };
