@@ -1,5 +1,5 @@
 import axios from "axios";
-import {Fancybox} from "@fancyapps/ui";
+import { Fancybox } from "@fancyapps/ui";
 
 enum ModalStatus {
     ACCEPTED = "ACCEPTED",
@@ -15,7 +15,7 @@ class Form {
     successModal;
     errorModal;
     error;
-    
+
     constructor(form: Element) {
         this.form = form;
         this.url = this.form.getAttribute('action');
@@ -25,35 +25,38 @@ class Form {
         this.successModal = document.querySelector('#modal-accept')
         this.errorModal = document.querySelector('#modal-error')
         this.error = false;
-        
+
         this.init()
     }
-    
+
     init() {
         this.changeButtonVisible()
-        
+
         this.accept.forEach(accept => {
             accept.addEventListener('change', () => {
                 this.changeButtonVisible()
             })
         })
-        
+
         this.form.addEventListener('submit', evt => {
             evt.preventDefault();
-            
+
             this.sendData();
         })
     }
-    
+
     getData = () => {
         const data = new FormData();
+        data.append('action', 'submit_lead');
+        data.append('nonce', lead_form_ajax.nonce);
         const errors: (HTMLInputElement | HTMLTextAreaElement)[] = [];
-        
+
         this.inputs.forEach((input) => {
+            if (input.name === '_wp_http_referer') return;
             data.append(input.name, input.value);
             input.classList.remove('error')
             const isRequired = input.hasAttribute('required');
-            
+
             if (isRequired && input.inputmask) {
                 if (input.value.length > 1 && !input.inputmask.isComplete()) {
                     input.classList.add('error');
@@ -63,13 +66,13 @@ class Form {
                     this.error = false;
                 }
             }
-            
+
             if (isRequired && input.value.length <= 2) {
                 input.classList.add('error');
                 this.error = true;
                 errors.push(input);
             }
-            
+
             if (!isRequired && input.type !== 'checkbox') {
                 if (input.value.length > 0 && input.value.length <= 2) {
                     input.classList.add('error');
@@ -80,14 +83,14 @@ class Form {
                 }
             }
         })
-        
+
         if (errors.length > 0) {
             return 'error';
         } else {
             return data;
         }
     }
-    
+
     sendData = () => {
         if (this.getData() !== 'error') {
             axios.post(this.url, this.getData())
@@ -105,13 +108,13 @@ class Form {
                 });
         }
     }
-    
+
     changeButtonVisible = () => {
         if (this.accept) {
             const accepted = Array.from(this.accept).filter((accept: HTMLInputElement) => {
                 return accept.checked;
             })
-            
+
             if (this.sendBtn) {
                 accepted.length >= 2
                     ? this.sendBtn.removeAttribute('disabled')
@@ -119,7 +122,7 @@ class Form {
             }
         }
     }
-    
+
     showModal = (status: ModalStatus, message?: string) => {
         if (status === ModalStatus.ACCEPTED) {
             Fancybox.show([this.successModal])
@@ -128,7 +131,7 @@ class Form {
             // text.textContent = message;
             Fancybox.show([this.errorModal])
         }
-        
+
         setTimeout(() => {
             Fancybox.close()
         }, 2000)
