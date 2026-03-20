@@ -1,4 +1,5 @@
 .faq {
+  position: relative;
   display: flex;
   gap: 70px;
 
@@ -167,5 +168,15 @@
     @include r($mobile) {
       padding: 0 20px;
     }
+  }
+
+  &__img {
+    position: absolute;
+    top: -588px;
+    left: -130px;
+    display: flex;
+    min-width: 1920px;
+    min-height: 1898px;
+    z-index: -1;
   }
 }

@@ -1,0 +1,117 @@
+.speakers {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px 30px;
+
+  @include r($mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 315px;
+    padding-top: 365px;
+  }
+
+  &__item {
+    display: flex;
+    min-height: 312px;
+    background-color: $white;
+    border-radius: 40px;
+
+    @include r($mobile) {
+      flex-direction: column;
+      min-height: auto;
+    }
+  }
+
+  &__speaker {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 33px 27px 28px;
+
+    @include r($mobile) {
+      margin-top: -243px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 280px;
+    margin-top: -38px;
+    margin-bottom: -38px;
+    border-radius: 50%;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    min-width: 278px;
+    text-align: center;
+    border-radius: 24px;
+    background-color: $blue;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    color: $white;
+  }
+
+  &__city {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    color: rgba($white, .6);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 30px 12px 27px 0;
+
+    @include r($mobile) {
+      padding: 15px 14px 30px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    color: $gray-dark;
+
+    &--accent {
+      font-size: 32px;
+      font-weight: 600;
+      color: $black;
+
+      @include r($mobile) {
+        font-size: 26px;
+        line-height: 1.1;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: -291px;
+    bottom: -252px;
+    display: flex;
+    z-index: -1;
+  }
+}

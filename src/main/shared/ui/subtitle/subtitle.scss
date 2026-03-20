@@ -1,0 +1,9 @@
+.subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  color: $gray-dark;
+
+  @include r($mobile) {
+    font-size: 16px;
+  }
+}

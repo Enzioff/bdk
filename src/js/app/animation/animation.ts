@@ -160,14 +160,16 @@ class Animation {
         
         elements.forEach(element => {
             const direction = element.getAttribute('data-direction');
+            const delay = element.getAttribute('data-delay');
             
             gsap.from(element, {
                 scrollTrigger: {
                     trigger: element,
                 },
-                xPercent: direction === Direction.LEFT ? -100 : 100,
+                xPercent: direction === Direction.LEFT ? -150 : 150,
                 duration: 1,
                 ease: "power4.out",
+                delay: delay ? delay : null,
             })
         })
     }

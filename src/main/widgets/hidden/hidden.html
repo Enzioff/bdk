@@ -2,8 +2,18 @@
     <div class="modal" id="modal-form">
         <div class="feedback feedback--modal">
             <form action="#" class="feedback__form form" novalidate>
-                <h2 class="form__title title">Стать партнером</h2>
+                <h2 class="form__title title">Участвовать</h2>
                 <div class="form__wrapper">
+                    <div class="form__checkboxes">
+                        <label class="form__item">
+                            <input class="checkbox" type="checkbox" name="DAYS" value="14">
+                            <span>14 мая 2026</span>
+                        </label>
+                        <label class="form__item">
+                            <input class="checkbox" type="checkbox" name="DAYS" value="15">
+                            <span>15 мая 2026</span>
+                        </label>
+                    </div>
                     <div class="form__list">
                         <label class="form__item">
                             <input class="input" type="text" placeholder="Ваше имя*" required>
@@ -13,12 +23,6 @@
                         </label>
                         <label class="form__item">
                             <input class="input" type="tel" placeholder="Номер телефона*" required>
-                        </label>
-                        <label class="form__item">
-                            <input class="input" type="text" placeholder="Название организации">
-                        </label>
-                        <label class="form__item">
-                            <input class="input" type="text" placeholder="Должность">
                         </label>
                     </div>
                     <div class="form__control">
@@ -34,7 +38,7 @@
                         </label>
                     </div>
                     <button class="button" type="submit">
-                        Зарегистрироваться
+                        Подать заявку
                         <svg class="button__icon">
                             <use xlink:href="./assets/sprite.svg#icon-arrow-right"></use>
                         </svg>

@@ -1,7 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 60px;
   padding: 50px;
   border-radius: 30px;
   background-image: url('../assets/images/3d-object-7.png'), url('../assets/images/background-gradient.jpg');
@@ -23,10 +23,15 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
+    gap: 32px;
     height: 100%;
+  }
+
+  &__checkboxes {
+    display: flex;
+    align-items: center;
+    gap: 24px;
   }
 
   &__list {
@@ -80,5 +85,9 @@
     font-weight: 500;
     line-height: 16px;
     color: $red;
+  }
+
+  .button {
+    margin-top: auto;
   }
 }

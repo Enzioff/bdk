@@ -29,9 +29,23 @@
 
   &--bg {
     position: relative;
-    overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  &--container {
+    position: relative;
+  }
+
+  &__decor {
+    position: absolute;
+    top: -526px;
+    left: 0;
+    display: flex;
+    min-width: 1920px;
+    min-height: 2027px;
+    flex-shrink: 0;
+    z-index: -1;
   }
 }

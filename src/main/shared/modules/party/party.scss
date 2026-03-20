@@ -1,0 +1,162 @@
+.party {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 136px;
+
+  @include r($mobile) {
+    gap: 60px;
+  }
+
+  &__preview {
+    display: grid;
+    grid-template-columns: 667px 1fr;
+    gap: 33px;
+
+    @include r($mobile) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 560px;
+    border-radius: 40px;
+    overflow: hidden;
+
+    @include r($mobile) {
+      height: 327px;
+      border-radius: 20px;
+    }
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+  }
+
+  &__text {
+    font-size: 28px;
+    font-weight: 400;
+    color: $black;
+
+    @include r($mobile) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    &--small {
+      font-size: 24px;
+      color: $gray-dark;
+
+      @include r($mobile) {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+    }
+
+    &--accent {
+      font-size: 32px;
+      font-weight: 600;
+      color: $blue;
+      line-height: 1.2;
+
+      @include r($mobile) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    color: $black;
+
+    @include r($mobile) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 528px;
+    gap: 30px;
+
+    @include r($mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 32px 20px;
+    background-color: $white;
+    border-radius: 40px;
+
+    @include r($mobile) {
+      padding: 32px 14px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: -695px;
+    right: -181px;
+    transform: rotate(91deg);
+    z-index: -1;
+    opacity: .05;
+  }
+}

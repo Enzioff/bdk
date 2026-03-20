@@ -41,25 +41,33 @@ class Form {
         this.form.addEventListener('submit', evt => {
             evt.preventDefault();
             
-            // @ts-ignore
-            grecaptcha.ready(() => {
-                // @ts-ignore
-                grecaptcha.execute('6LcBKdUqAAAAANFHfh5Zkg-ExdT7OHwzlKZqq0P_', {action: 'submit'}).then(() => {
-                    this.sendData();
-                });
-            });
+            this.sendData();
+            
+            // // @ts-ignore
+            // grecaptcha.ready(() => {
+            //     // @ts-ignore
+            //     grecaptcha.execute('6LcBKdUqAAAAANFHfh5Zkg-ExdT7OHwzlKZqq0P_', {action: 'submit'}).then(() => {
+            //         this.sendData();
+            //     });
+            // });
         })
     }
     
     getData = () => {
         const data = new FormData();
         data.append('action', 'submit_lead');
-        data.append('nonce', lead_form_ajax.nonce);
+        // data.append('nonce', lead_form_ajax.nonce);
         const errors: (HTMLInputElement | HTMLTextAreaElement)[] = [];
         
         this.inputs.forEach((input) => {
             if (input.name === '_wp_http_referer') return;
-            data.append(input.name, input.value);
+            if (input.type === 'checkbox') {
+                if ("checked" in input && input.checked) {
+                    data.append(input.name, input.value);
+                }
+            } else {
+                data.append(input.name, input.value);
+            }
             input.classList.remove('error')
             const isRequired = input.hasAttribute('required');
             
@@ -73,9 +81,10 @@ class Form {
                 }
             }
             
-            if (isRequired && input.value.length <= 2) {
+            if (isRequired && input.type !== 'checkbox' && input.value.length <= 2) {
                 input.classList.add('error');
                 this.error = true;
+                console.log('error2')
                 errors.push(input);
             }
             
@@ -89,6 +98,8 @@ class Form {
                 }
             }
         })
+        
+        console.log(errors)
         
         if (errors.length > 0) {
             return 'error';
