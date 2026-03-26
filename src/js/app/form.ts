@@ -123,9 +123,9 @@ class Form {
             })
             
             if (this.sendBtn) {
-                accepted.length >= 2
-                    ? this.sendBtn.removeAttribute('disabled')
-                    : this.sendBtn.setAttribute('disabled', '')
+                accepted.length <= 0
+                    ? this.sendBtn.setAttribute('disabled', '')
+                    : this.sendBtn.removeAttribute('disabled')
             }
         }
     }
