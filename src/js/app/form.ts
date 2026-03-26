@@ -30,14 +30,6 @@ class Form {
     }
     
     init() {
-        this.changeButtonVisible()
-        
-        this.accept.forEach(accept => {
-            accept.addEventListener('change', () => {
-                this.changeButtonVisible()
-            })
-        })
-        
         this.form.addEventListener('submit', evt => {
             evt.preventDefault();
             
@@ -113,20 +105,6 @@ class Form {
                     this.showModal(ModalStatus.ERROR, error.message);
                     console.log(error)
                 });
-        }
-    }
-    
-    changeButtonVisible = () => {
-        if (this.accept) {
-            const accepted = Array.from(this.accept).filter((accept: HTMLInputElement) => {
-                return accept.checked;
-            })
-            
-            if (this.sendBtn) {
-                accepted.length <= 0
-                    ? this.sendBtn.setAttribute('disabled', '')
-                    : this.sendBtn.removeAttribute('disabled')
-            }
         }
     }
     

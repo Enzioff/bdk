@@ -26,6 +26,18 @@
     align-items: flex-start;
     gap: 32px;
     height: 100%;
+
+    .button {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    &:has(input[data-accept-form]:checked) {
+      .button {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
   }
 
   &__checkboxes {
