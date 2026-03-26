@@ -42,14 +42,6 @@ class Form {
             evt.preventDefault();
             
             this.sendData();
-            
-            // // @ts-ignore
-            // grecaptcha.ready(() => {
-            //     // @ts-ignore
-            //     grecaptcha.execute('6LcBKdUqAAAAANFHfh5Zkg-ExdT7OHwzlKZqq0P_', {action: 'submit'}).then(() => {
-            //         this.sendData();
-            //     });
-            // });
         })
     }
     
@@ -98,8 +90,6 @@ class Form {
                 }
             }
         })
-        
-        console.log(errors)
         
         if (errors.length > 0) {
             return 'error';
